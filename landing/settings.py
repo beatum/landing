@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Django settings for landing project.
 
@@ -11,10 +13,15 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
+from django.conf import global_settings
 import os
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+path = lambda *a: os.path.join(BASE_DIR, *a)
 
+# -----------------------------------------------------------------------------
+# MAIN SETTINGS
+# -----------------------------------------------------------------------------
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -27,8 +34,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
+# -----------------------------------------------------------------------------
+# APP DEFINITION
+# -----------------------------------------------------------------------------
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -37,6 +45,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # External
+    'django_extensions',
+    'djangobower',
+    'compressor',
+    'bootstrap3',
+
+    # Internal
+    'landing.page',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +72,7 @@ ROOT_URLCONF = 'landing.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [path('templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,11 +98,13 @@ DATABASES = {
     }
 }
 
+# -----------------------------------------------------------------------------
+# INTERNATIONALIZATION
+# -----------------------------------------------------------------------------
 
-# Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -95,8 +114,37 @@ USE_L10N = True
 
 USE_TZ = True
 
+# -----------------------------------------------------------------------------
+# STATIC AND MEDIA
+# -----------------------------------------------------------------------------
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
+MEDIA_ROOT = path('media/')
+
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = path('static/')
 
 STATIC_URL = '/static/'
+
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+STATICFILES_FINDERS = global_settings.STATICFILES_FINDERS + (
+    'djangobower.finders.BowerFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+BOWER_COMPONENTS_ROOT = path('components')
+
+BOWER_INSTALLED_APPS = ('bootstrap#3.3.4', 'jquery#2.1.4')
+
+COMPRESS_URL = '/'
+
+COMPRESS_ROOT = BASE_DIR
+
+COMPRESS_OUTPUT_DIR = 'media/compress'
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'sass --scss {infile} {outfile}'),
+    ('text/x-sass', 'sass {infile} {outfile}'),
+    ('text/less', 'lessc {infile} {outfile}'),
+)

@@ -27,6 +27,8 @@ static/
 *.sass-cache/
 pids
 xapian_index
+env
+components
 # settings_local*
 
 ##########################
@@ -40,8 +42,6 @@ syntax: regexp
 packages/
 ^fixtures/*
 ^fixture/*
-venv/
-env/
 ^tags
 whoosh_index
 .directory
