@@ -10,55 +10,194 @@ Primary use: Business, Portfolio and Blog
 Code Description: Sometime I use LESS or SASS preprocessor to
 code and optimize to reponsive with nested style.
 -------------------------------------------------------------------*/
+
 /*------------------------------------------------------------------
 
 TABLE OF CONTENTS
 
 1. HTML & BODY              / #wrapper
+	1.1. Heders
+	1.1. Links
 2. Intro section            / #intro
-3. Main navigation          / #navbar
-4. Promo section            / #promo
-5. Service section          / #service
-6. Skills section           / #skills
-7. Reviews section          / #reviews
-8. Action section           / #action
-9. Feedback section         / #feedback
-10. Footer section          / #footer
+3. Promo section            / #promo
+4. Service section          / #service
+5. Statistics section       / #stats
+6. Reviews section          / #reviews
+7. Action section           / #action
+8. Footer section           / #footer
 
 -------------------------------------------------------------------*/
+
 /*------------------------------------------------------------------
+
 COLORS
 
-Base Color 1 : #020066; // less variable @baseColor
-Base Color 2 : #333d40; // less variable @baseColor2
-Base Color 3 : #9c9c9c; // less variable @baseColor3
+Base Color 1 :#000000;
+Base Color 2 :#FEDC10;
+Base Color 3 :#FF5757;
+Base Color 4 :#FFCC33;
+Base Color 5 :#292929;
+Base Color 6 :#91B5DA;
+Base Color 7 :#6295D5;
+Base Color 8 :#A7A7A7;
 
 -------------------------------------------------------------------*/
+
+.bc-1{
+	color: #000000;
+}
+.bc-2{
+	color: #FEDC10;
+}
+.bc-3{
+	color: #FF5757;
+}
+.bc-4{
+	color: #FFCC33;
+}
+.bc-5{
+	color: #292929;
+}
+.bc-6{
+	color: #91B5DA;
+}
+.bc-7{
+	color: #6295D5;
+}
+.bc-8{
+	color: #A7A7A7;
+}
+
 /*------------------------------------------------------------------
+
 FONTS
 
-Base Fonts 1 : Open Sans // less variable @baseFont
-Base Fonts 2 : Open Sans // less variable @baseFont2
+Fonts 1 : Open Sans (Normal400, Light300, Semi-Bold600, Normal400Italic, Semi-Bold600, ItalicBold700)
+font-family: 'Open Sans', sans-serif;
+
+Fonts 2 : Open Sans Condensed (Light300, Light300Italic, Bold700)
+font-family: 'Open Sans Condensed', sans-serif;
+
 -------------------------------------------------------------------*/
+
+.os{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.osc{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.osc-700{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+}
+
 /*------------------------------------------------------------------
+
 UTILS
 
-
 -------------------------------------------------------------------*/
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.b-red{
+	border: 1px solid red;
+}
+.b-black{
+	border: 1px solid red;
+}
+.pt-50{
+	padding-top: 50px;
+}
+.pb-50{
+	padding-bottom: 50px;
+}
 /*------------------------------------------------------------------
 1. HTML, BODY
 -------------------------------------------------------------------*/
 body {
-    overflow-y: scroll;
+  overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 #wrapper{
-    padding-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+#wrapper .container {
+  width: 1080px;
+  max-width: none !important;
+}
+
+#wrapper .row, #wrapper .container .row  {
+  margin: 0;
+  position: relative;
+}
+
+#wrapper h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+/* Links */
+
+#wrapper a {
+  outline: none;
+  transition: all 300ms ease-in-out;
+}
+
+#wrapper a:focus,
+#wrapper a:hover {
+  outline: none;
+  text-decoration: none;
 }
 
 /*------------------------------------------------------------------
 2. Intro
 -------------------------------------------------------------------*/
 #intro {
-    padding: 10px 0;
+    padding: 50px 0;
+}
+.logotype {
+
+}
+.phone-holder {
+	color: #292929;
+}
+.phone-text {
+ 	font-size: 18px;
+}
+.phone-number {
+	font-size: 40px;
+}
+.phone-number span {
+	font-size: 16px;
+  padding-right: 10px;
+}
+/*------------------------------------------------------------------
+3. Promo
+-------------------------------------------------------------------*/
+#promo {
+
+}
+.promo-text {
+  font-size: 36px;
+  line-height: 45px;
+}
+.promo-text span {
+  background-color: #FEDC10;
+  padding: 3px 6px;
+}
+
+.action-form {
+	background-color: #292929;
+  color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
 }
