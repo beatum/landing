@@ -10,14 +10,13 @@ Primary use: Business, Portfolio and Blog
 Code Description: Sometime I use LESS or SASS preprocessor to
 code and optimize to reponsive with nested style.
 -------------------------------------------------------------------*/
-
 /*------------------------------------------------------------------
 
 TABLE OF CONTENTS
 
 1. HTML & BODY              / #wrapper
-	1.1. Heders
-	1.1. Links
+    1.1. Heders
+    1.1. Links
 2. Intro section            / #intro
 3. Promo section            / #promo
 4. Service section          / #service
@@ -27,7 +26,6 @@ TABLE OF CONTENTS
 8. Footer section           / #footer
 
 -------------------------------------------------------------------*/
-
 /*------------------------------------------------------------------
 
 COLORS
@@ -43,29 +41,36 @@ Base Color 8 :#A7A7A7;
 
 -------------------------------------------------------------------*/
 
-.bc-1{
-	color: #000000;
+.bc-1 {
+    color: #000000;
 }
-.bc-2{
-	color: #FEDC10;
+
+.bc-2 {
+    color: #FEDC10;
 }
-.bc-3{
-	color: #FF5757;
+
+.bc-3 {
+    color: #FF5757;
 }
-.bc-4{
-	color: #FFCC33;
+
+.bc-4 {
+    color: #FFCC33;
 }
-.bc-5{
-	color: #292929;
+
+.bc-5 {
+    color: #292929;
 }
-.bc-6{
-	color: #91B5DA;
+
+.bc-6 {
+    color: #91B5DA;
 }
-.bc-7{
-	color: #6295D5;
+
+.bc-7 {
+    color: #6295D5;
 }
-.bc-8{
-	color: #A7A7A7;
+
+.bc-8 {
+    color: #A7A7A7;
 }
 
 /*------------------------------------------------------------------
@@ -80,16 +85,17 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 -------------------------------------------------------------------*/
 
-.os{
-	font-family: 'Open Sans', sans-serif;
+.os {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.osc{
-	font-family: 'Open Sans Condensed', sans-serif;
+.osc {
+    font-family: 'Open Sans Condensed', sans-serif;
 }
-.osc-700{
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-weight: 700;
+
+.osc-700 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
 }
 
 /*------------------------------------------------------------------
@@ -98,63 +104,69 @@ UTILS
 
 -------------------------------------------------------------------*/
 
-.fl{
-	float: left;
+.fl {
+    float: left;
 }
-.fr{
-	float: right;
+
+.fr {
+    float: right;
 }
-.b-red{
-	border: 1px solid red;
+
+.b-red {
+    border: 1px solid red;
 }
-.b-black{
-	border: 1px solid red;
+
+.b-black {
+    border: 1px solid red;
 }
-.pt-50{
-	padding-top: 50px;
+
+.pt-50 {
+    padding-top: 50px;
 }
-.pb-50{
-	padding-bottom: 50px;
+
+.pb-50 {
+    padding-bottom: 50px;
 }
+
 /*------------------------------------------------------------------
 1. HTML, BODY
 -------------------------------------------------------------------*/
 body {
-  overflow-y: scroll;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+    overflow-y: scroll;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
-#wrapper{
-  padding-bottom: 50px;
+#wrapper {
+    padding-bottom: 50px;
 }
 
 #wrapper .container {
-  width: 1080px;
-  max-width: none !important;
+    width: 1080px;
+    max-width: none !important;
 }
 
-#wrapper .row, #wrapper .container .row  {
-  margin: 0;
-  position: relative;
+#wrapper .row, #wrapper .container .row {
+    margin: 0;
+    position: relative;
 }
 
 #wrapper h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Links */
 
 #wrapper a {
-  outline: none;
-  transition: all 300ms ease-in-out;
+    outline: none;
+    transition: all 300ms ease-in-out;
 }
 
 #wrapper a:focus,
 #wrapper a:hover {
-  outline: none;
-  text-decoration: none;
+    outline: none;
+    text-decoration: none;
 }
 
 /*------------------------------------------------------------------
@@ -163,41 +175,49 @@ body {
 #intro {
     padding: 50px 0;
 }
+
 .logotype {
 
 }
+
 .phone-holder {
-	color: #292929;
+    color: #292929;
 }
+
 .phone-text {
- 	font-size: 18px;
+    font-size: 18px;
 }
+
 .phone-number {
-	font-size: 40px;
+    font-size: 40px;
 }
+
 .phone-number span {
-	font-size: 16px;
-  padding-right: 10px;
+    font-size: 16px;
+    padding-right: 10px;
 }
+
 /*------------------------------------------------------------------
 3. Promo
 -------------------------------------------------------------------*/
 #promo {
 
 }
+
 .promo-text {
-  font-size: 36px;
-  line-height: 45px;
+    font-size: 36px;
+    line-height: 45px;
 }
+
 .promo-text span {
-  background-color: #FEDC10;
-  padding: 3px 6px;
+    background-color: #FEDC10;
+    padding: 3px 6px;
 }
 
 .action-form {
-	background-color: #292929;
-  color: white;
-  width: 300px;
-  padding: 20px;
-  border-radius: 10px;
+    background-color: #292929;
+    color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
 }
