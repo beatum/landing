@@ -135,7 +135,7 @@ STATICFILES_FINDERS = global_settings.STATICFILES_FINDERS + (
 
 BOWER_COMPONENTS_ROOT = path('components')
 
-BOWER_INSTALLED_APPS = ('bootstrap#3.3.4', 'jquery#2.1.4')
+BOWER_INSTALLED_APPS = ('bootstrap#3.3.4', 'jquery#2.1.4', 'font-awesome#4.3.0')
 
 COMPRESS_URL = '/'
 
