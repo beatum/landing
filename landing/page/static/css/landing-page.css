@@ -15,8 +15,8 @@ code and optimize to reponsive with nested style.
 TABLE OF CONTENTS
 
 1. HTML & BODY              / #wrapper
-2. Main navigation          / #navbar
-3. Intro section            / #intro
+2. Intro section            / #intro
+3. Main navigation          / #navbar
 4. Promo section            / #promo
 5. Service section          / #service
 6. Skills section           / #skills
@@ -55,9 +55,10 @@ body {
 #wrapper{
     padding-bottom: 50px;
 }
+
 /*------------------------------------------------------------------
-2. Main navigation
+2. Intro
 -------------------------------------------------------------------*/
-#navbar {
-    padding-top: 50px;
+#intro {
+    padding: 10px 0;
 }
