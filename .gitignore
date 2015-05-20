@@ -18,7 +18,7 @@ tests/coverage_html/
 tests/.coverage
 logs/
 media/
-static/
+static
 .DS_Store
 .project
 .pydevproject
