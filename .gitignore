@@ -37,7 +37,7 @@ components
 
 syntax: regexp
 
-^static/
+#^static/
 .tmp_
 packages/
 ^fixtures/*
