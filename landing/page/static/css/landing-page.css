@@ -1,0 +1,63 @@
+/*-------------------------------------------------------------------
+MASTER STYLESHEET
+
+Project: Landing Page Site Template
+Version: 1.1
+Last change: 20/05/2015
+Developed By: Ivan Semernyakov
+Developer URI: http://beatum-site.ru/
+Primary use: Business, Portfolio and Blog
+Code Description: Sometime I use LESS or SASS preprocessor to
+code and optimize to reponsive with nested style.
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+
+TABLE OF CONTENTS
+
+1. HTML & BODY              / #wrapper
+2. Main navigation          / #navbar
+3. Intro section            / #intro
+4. Promo section            / #promo
+5. Service section          / #service
+6. Skills section           / #skills
+7. Reviews section          / #reviews
+8. Action section           / #action
+9. Feedback section         / #feedback
+10. Footer section          / #footer
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+COLORS
+
+Base Color 1 : #020066; // less variable @baseColor
+Base Color 2 : #333d40; // less variable @baseColor2
+Base Color 3 : #9c9c9c; // less variable @baseColor3
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+FONTS
+
+Base Fonts 1 : Open Sans // less variable @baseFont
+Base Fonts 2 : Open Sans // less variable @baseFont2
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+UTILS
+
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+1. HTML, BODY
+-------------------------------------------------------------------*/
+body {
+    overflow-y: scroll;
+}
+
+#wrapper{
+    padding-bottom: 50px;
+}
+/*------------------------------------------------------------------
+2. Main navigation
+-------------------------------------------------------------------*/
+#navbar {
+    padding-top: 50px;
+}

@@ -1,0 +1,52 @@
+/* Main Style */
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 100%;
+    color: white;
+    overflow-y: scroll;
+}
+body h1, h2, h3 {
+    font-weight: bold;
+}
+.bg-cover {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+#intro {
+    background-image: url("/static/img/bg1.jpg");
+}
+#service {
+    background-image: url("/static/img/bg2.jpg");
+}
+#experience {
+    background-image: url("/static/img/bg3.jpg");
+}
+#action {
+    background-image: url("/static/img/bg4.jpg");
+}
+#feedback {
+    background-image: url("/static/img/bg5.jpg");
+}
+
+
+.service-item {
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+#header, #footer {
+    position: fixed;
+    height: 50px;
+    display: block;
+    width: 100%;
+    background: #333;
+    z-index: 9;
+    text-align: center;
+    color: #f2f2f2;
+    padding: 20px 0 0 0;
+}
