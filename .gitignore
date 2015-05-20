@@ -18,7 +18,6 @@ tests/coverage_html/
 tests/.coverage
 logs/
 media/
-static
 .DS_Store
 .project
 .pydevproject
@@ -37,7 +36,7 @@ components
 
 syntax: regexp
 
-#^static/
+^static/
 .tmp_
 packages/
 ^fixtures/*
@@ -45,3 +44,4 @@ packages/
 ^tags
 whoosh_index
 .directory
+static
