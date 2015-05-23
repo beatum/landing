@@ -13,34 +13,76 @@
         </div>
       </div>
     </div>
+    {% include "include/messages.html" %}
     <div id="promo">
       <div class="container b-red">
         <div class="row">
           <div class="promo-left osc-700 fl">
-          <div class="promo-text"><span>За 2 дня</span> получите кредит <span>600 000 руб.</span><br>из крупного банка для владельцев бизнеса<br>по ставке менее 2,5 % в месяц.</div>  
+            <div class="promo-text"><span>За 2 дня</span> получите кредит <span>600 000 руб.</span><br>из крупного банка
+              для владельцев бизнеса<br>по ставке менее 2,5 % в месяц.
+            </div>
           </div>
           <div class="promo-right">
             <div class="promo-form fr">
-            <div class="action-form">
-              <form action="" method="POST" role="form">
-                <div class="form-header text-center">Оставьте заявку сейчас -<br>подтвердим уже сегодня</div>
-                <div class="form-step text-center"><small>шаг 1\2</small></div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="" placeholder="Имя">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="" placeholder="Телефон">
-                </div> 
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Получить одобрение</button>
-                </div>
-              </form>
+              <div class="action-form">
+                <form action="" method="POST" role="form">
+                  <div class="form-header text-center">Оставьте заявку сейчас -<br>подтвердим уже сегодня</div>
+                  <div class="form-step text-center">
+                    <small>шаг 1\2</small>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="" placeholder="Имя">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="" placeholder="Телефон">
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Получить одобрение</button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12"></div>
+          <div class="col-xs-12">
+            <form id="PersonForm" action="" method="post" accept-charset="utf-8">
+              {% csrf_token %}
+              <div class="form-group">
+                {#<label for="{{ form.full_name.id_for_label }}">{{ form.full_name.label_tag }}</label>#}
+                {{ form.full_name }}
+              </div>
+              <div class="form-group">
+                {#<label for="{{ form.phone.id_for_label }}">{{ form.phone.label_tag }}</label>#}
+                {{ form.phone }}
+              </div>
+              <div class="form-group">
+                {#<label for="{{ form.age.id_for_label }}">{{ form.age.label_tag }}</label>#}
+                {{ form.age }}
+              </div>
+              <div class="form-group">
+                {#<label for="{{ form.position.id_for_label }}">{{ form.position.label_tag }}</label>#}
+                {{ form.position }}
+              </div>
+              <div class="form-group">
+                {#<label for="{{ form.registry.id_for_label }}">{{ form.registry.label_tag }}</label>#}
+                {{ form.registry }}
+              </div>
+              <div class="form-group">
+                <label for="{{ form.yes_arrears.id_for_label }}">
+                  {{ form.yes_arrears }}
+                  {{ form.yes_arrears.label_tag }}
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="{{ form.no_arrears.id_for_label }}">
+                  {{ form.no_arrears }}
+                  {{ form.no_arrears.label_tag }}
+                </label>
+              </div>
+              <button type="submit" class="btn btn-default">отправить</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

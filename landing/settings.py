@@ -15,6 +15,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 from django.conf import global_settings
+from django.utils.translation import ugettext_lazy as _
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 path = lambda *a: os.path.join(BASE_DIR, *a)
@@ -39,6 +40,7 @@ ALLOWED_HOSTS = ['*']
 # -----------------------------------------------------------------------------
 
 INSTALLED_APPS = (
+    'suit',  # admin skin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,7 +55,9 @@ INSTALLED_APPS = (
     'bootstrap3',
 
     # Internal
+    'landing',
     'landing.page',
+    'landing.core',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,7 +110,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -148,3 +152,18 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-sass', 'sass {infile} {outfile}'),
     ('text/less', 'lessc {infile} {outfile}'),
 )
+
+# -----------------------------------------------------------------------------
+# ADMIN SKIN
+# -----------------------------------------------------------------------------
+
+# Django Suit configuration example
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Бизнес Прайм',
+    'HEADER_DATE_FORMAT': 'D d M Y',
+    'MENU_EXCLUDE': ('auth.group', 'auth'),
+    'MENU_OPEN_FIRST_CHILD': True,
+    'MENU_ICONS': {
+        'page': 'icon-file',
+    },
+}

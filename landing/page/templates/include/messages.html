@@ -1,0 +1,15 @@
+{% load i18n %}
+{% spaceless %}
+  {% for message in messages %}
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <div class="alert fade in {% if message.tags %} alert-{{ message.tags }}{% endif %}" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endspaceless %}
